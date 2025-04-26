@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Навыки студентов</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Навыки студентов</h1>
+
+        <div class="filter-container">
+            <label for="filter-priority">Приоритетные навыки (введите приоритет от 1 до 3):</label>
+            <div id="filter-priority">
+                <label for="python-priority">Python</label>
+                <input type="text" id="python-priority" placeholder="Приоритет Python"><br>
+
+                <label for="java-priority">Java</label>
+                <input type="text" id="java-priority" placeholder="Приоритет Java"><br>
+
+                <label for="linux-priority">Linux</label>
+                <input type="text" id="linux-priority" placeholder="Приоритет Linux"><br>
+
+                <button id="apply-filters">Применить фильтры</button>
+            </div>
+            <p>Введите приоритетные навыки. Затем данные будут фильтроваться и отображены с учётом приоритетов.</p>
+        </div>
+
+        <div class="table-wrapper">
+            <div id="second-statistics">
+                <p>Загружается...</p>
+            </div>
+        </div>
+
+        <a href="/">← Назад к списку студентов</a>
+    </div>
+
+    <script src="skills.js"></script>
+</body>
+</html>

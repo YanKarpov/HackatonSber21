@@ -1,0 +1,11 @@
+.env
+
+.clj-kondo/
+.lsp/
+venv/
+
+node_modules/
+package-lock.json
+
+token.json
+users.csv

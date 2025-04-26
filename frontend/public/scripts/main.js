@@ -5,36 +5,29 @@ window.onload = function() {
             const statsDiv = document.getElementById('statistics');
             statsDiv.innerHTML = `<p>Общее количество студентов: ${users.length}</p>`;
 
-            const table = document.createElement('table');
-            table.innerHTML = `
-                <thead>
-                    <tr>
-                        <th>ФИО</th>
-                        <th>Логин</th>
-                        <th>Level</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            `;
+            const cardsContainer = document.createElement('div');
+            cardsContainer.classList.add('cards-container');
 
-            const tbody = table.querySelector('tbody');
             users.forEach(user => {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td>${user.ФИО}</td>
-                    <td>${user.Логин}</td>
-                    <td>${user.level !== null ? user.level : '-'}</td>
+                const card = document.createElement('div');
+                card.classList.add('card');
+                card.innerHTML = `
+                    <div class="card-header">
+                        <h3>${user.ФИО}</h3>
+                    </div>
+                    <div class="card-body">
+                        <p><strong>Логин:</strong> ${user.Логин}</p>
+                        <p><strong>Level:</strong> ${user.level !== null ? user.level : '-'}</p>
+                    </div>
                 `;
-                tbody.appendChild(row);
+                cardsContainer.appendChild(card);
             });
 
-            statsDiv.appendChild(table);
+            statsDiv.appendChild(cardsContainer);
         })
         .catch(error => {
             console.error('Ошибка при загрузке статистики:', error);
             const statsDiv = document.getElementById('statistics');
             statsDiv.innerHTML = '<p>Ошибка при загрузке данных.</p>';
         });
-        
 };

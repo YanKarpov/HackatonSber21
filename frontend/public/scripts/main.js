@@ -36,4 +36,5 @@ window.onload = function() {
             const statsDiv = document.getElementById('statistics');
             statsDiv.innerHTML = '<p>Ошибка при загрузке данных.</p>';
         });
+        
 };

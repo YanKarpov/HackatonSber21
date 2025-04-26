@@ -1,0 +1,90 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .left-side {
+    flex: 1;
+    background: #861BE3;
+    background-image: url('../images/Trees.png'); 
+    background-size: cover;
+    background-position: center;
+    position: relative; 
+    overflow: hidden;
+  }
+
+  .left-side .logo {
+    position: absolute;
+    top: 30px;   
+    left: 30px;  
+    width: 120px; 
+    height: auto;
+  }
+  
+  .right-side {
+    flex: 1;
+    background-color: #1a1f29; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
+  
+  .login-form h1 {
+    color: white;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .login-form input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    background: #fff;
+  }
+  
+  .login-form button {
+    padding: 10px;
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .login-form button:hover {
+    opacity: 0.9;
+  }
+  
+  .forgot-password {
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  .forgot-password a {
+    color: #00ff99;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .forgot-password a:hover {
+    text-decoration: underline;
+  }
+
+  
+  

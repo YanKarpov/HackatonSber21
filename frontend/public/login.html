@@ -1,49 +1,30 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Авторизация</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Вход в Систему</title>
+  <link rel="stylesheet" href="styles/login.css">
 </head>
 <body>
-    <h1>Авторизация</h1>
-    <form id="login-form">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required placeholder="Введите email"><br><br>
-        <label for="password">Пароль:</label>
-        <input type="password" id="password" name="password" required placeholder="Введите пароль"><br><br>
+  <div class="container">
+    <div class="left-side">
+        <img src="images/logo.png" alt="Логотип" class="logo">
+    </div>
+    <div class="right-side">
+      <form class="login-form" id="login-form">
+        <h1>Вход в Систему</h1>
+        <input type="email" id="email" name="email" placeholder="Логин" required>
+        <input type="password" id="password" name="password" placeholder="Пароль" required>
         <button type="submit">Войти</button>
-    </form>
+        <div class="forgot-password">
+          <a href="#">Забыли пароль?</a>
+        </div>
+      </form>
+    </div>
+  </div>
 
-    <p id="error-message" style="color: red;"></p>
-
-    <script>
-        document.getElementById("login-form").addEventListener("submit", function(event) {
-            event.preventDefault();
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("password").value;
-            const errorMessage = document.getElementById("error-message");
-
-            fetch("/login", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({ email, password })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    window.location.href = "/skills";  // Перенаправляем на страницу навыков после успешного логина
-                } else {
-                    errorMessage.textContent = data.message;
-                }
-            })
-            .catch(error => {
-                errorMessage.textContent = "Ошибка при авторизации.";
-                console.error(error);
-            });
-        });
-    </script>
+  <script src="scripts/login.js"></script>
 </body>
 </html>
+

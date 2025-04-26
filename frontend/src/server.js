@@ -20,21 +20,27 @@ app.use(express.static(path.join(__dirname, '../public')));
 const users = [
   { email: 'test@example.com', password: 'testpassword' },
   { email: 'admin@example.com', password: 'adminpass' }
-];
+]
 
 function isAuthenticated(req, res, next) {
   if (req.session.user) {
-    return next();
+    return next();  
   }
-  res.redirect('/login');
+  res.redirect('/login');  
 }
 
-// Маршрут логина
+app.get('/check-auth', (req, res) => {
+  if (req.session.user) {
+    res.json({ isAuthenticated: true });
+  } else {
+    res.json({ isAuthenticated: false });
+  }
+});
+
 app.get('/login', (req, res) => {
   res.sendFile(path.join(__dirname, '../public', 'login.html'));
 });
 
-// Обработка отправки формы логина
 app.post('/login', (req, res) => {
   const { email, password } = req.body;
   const user = users.find(u => u.email === email && u.password === password);
@@ -47,7 +53,6 @@ app.post('/login', (req, res) => {
   }
 });
 
-// Выход
 app.post('/logout', (req, res) => {
   req.session.destroy(err => {
     if (err) {
@@ -57,19 +62,16 @@ app.post('/logout', (req, res) => {
   });
 });
 
-// Защищённые маршруты
 app.get('/', isAuthenticated, (req, res) => {
-  res.sendFile(path.join(__dirname, '../public', 'index.html'));
+  res.sendFile(path.join(__dirname, '../public', 'main.html'));
 });
 
 app.get('/skills', isAuthenticated, (req, res) => {
   res.sendFile(path.join(__dirname, '../public', 'skills.html'));
 });
 
-// Остальные роуты
 app.use(routes);
 
-// Запуск сервера
 app.listen(port, () => {
   console.log(`Сервер запущен на http://localhost:${port}`);
 });

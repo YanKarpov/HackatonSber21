@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Статистика Skills</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="globals.css" />
+    <link href="https://fonts.googleapis.com/css2?family=SB+Sans+Display:wght@600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="desktop">
+        <div class="text-wrapper-16">СИСТЕМА 21</div>
+        <div class="ellipse"></div>
+        <div class="overlap">
+            <div class="text-wrapper">Фильтр</div>
+            <div class="text-wrapper-2"><label for="skillSelect">Выберите навык:</label></div>
+            <img class="vector" src="img/vector-1.svg" />
+            <div class="logo"><img class="img" src="img/logo.svg" /></div>
+
+            <div class="skill-select-wrapper">
+                <select id="skillSelect" onchange="updateChart(this.value)">
+                    <option value="all">Все</option>
+                    <option value="python">Python</option>
+                    <option value="go">Go</option>
+                    <option value="linux">Linux</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Kotlin">Kotlin</option>
+                </select>
+            </div>
+        </div>
+        <div class="overlap-group">
+            <div>
+                <button onclick="toggleTheme()">Переключить тему</button>
+            </div>
+            <div class="overlap-2">
+                <div class="rectangle">
+                    <canvas id="myChart" width="200" height="100"></canvas>
+                    <canvas id="averageChart" width="200" height="100" style="margin-top: 20px;"></canvas>
+                </div>
+                <div class="overlap-3">
+                    <div class="overlap-group-wrapper">
+                        <div class="div-wrapper">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

@@ -1,0 +1,383 @@
+body {
+    background-color: #ffffff;
+    /* Цвет фона для светлой темы */
+    color: #212121;
+    /* Цвет текста для светлой темы */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+body.dark-theme {
+    background-color: #1d2633;
+    /* Темный фон */
+    color: #ffffff;
+    /* Цвет текста для темной темы */
+}
+
+h1 {
+    font-family: 'SB Sans Display', sans-serif;
+}
+
+.desktop {
+    background-color: #ebecf4;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.desktop.dark-theme {
+    background-color: #1d2633;
+}
+.desktop .div {
+    background-color: #ebecf4;
+    overflow: hidden;
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+}
+
+.desktop .ellipse {
+    position: absolute;
+    width: 54px;
+    height: 54px;
+    top: 51px;
+    left: 1816px;
+    background-color: #516077;
+    border-radius: 27px;
+}
+
+.desktop .overlap {
+    position: absolute;
+    width: 384px;
+    height: 200%;
+    top: 0;
+    left: -34px;
+    background-color: #1d2633;
+    border-radius: 40px;
+}
+.desktop .overlap.dark-theme {
+    position: absolute;
+    width: 384px;
+    height: 200%;
+    top: 0;
+    left: -34px;
+    background-color: #212121;
+    border-radius: 40px;
+}
+.desktop .overlap-group {
+    position: absolute;
+    width: 1470px;
+    height: 184%;
+    top: 169px;
+    left: 392px;
+    background-color: #f4f4f9;
+    border-radius: 40px;
+}
+
+.desktop .overlap-group.dark-theme {
+    position: absolute;
+    width: 1470px;
+    height: 184%;
+    top: 169px;
+    left: 392px;
+    background-color: #323842;
+    border-radius: 40px;
+}
+
+.desktop .rectangle {
+    position: absolute;
+    width: 1394px;
+    height: 120%;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    border-radius: 40px;
+    border: 2px solid;
+    border-color: #c6cfda;
+}
+
+.desktop .rectangle.dark-theme {
+    position: absolute;
+    width: 1394px;
+    height: 120%;
+    top: 0;
+    left: 0;
+    background-color: #6A7584;
+    border-radius: 40px;
+    border: 2px solid;
+    border-color: #c6cfda;
+}
+
+.desktop .text-wrapper {
+    top: 176px;
+    left: 82px;
+    font-family: "SB Sans Display-Regular", Helvetica;
+    color: #c6cfda;
+    font-size: 32px;
+    text-align: center;
+    line-height: 15px;
+    position: absolute;
+    font-weight: 400;
+    letter-spacing: 0;
+    white-space: nowrap;
+}
+
+.desktop .text-wrapper-2 {
+    top: 241px;
+    left: 84px;
+    font-family: "SB Sans Display-Regular", Helvetica;
+    color: #44eb99;
+    font-size: 24px;
+    text-align: center;
+    line-height: 15px;
+    position: absolute;
+    font-weight: 400;
+    letter-spacing: 0;
+    white-space: nowrap;
+}
+
+.desktop .vector {
+    position: absolute;
+    width: 251px;
+    height: 2px;
+    top: 218px;
+    left: 84px;
+}
+
+.desktop .logo {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    top: 48px;
+    left: 82px;
+}
+
+.desktop .img {
+    position: absolute;
+    width: 82px;
+    height: 84px;
+    top: 3px;
+    left: 4px;
+}
+
+.desktop .text-wrapper-3 {
+    position: absolute;
+    top: 13px;
+    left: 40px;
+    font-family: "SB Sans Display-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 10px;
+    white-space: nowrap;
+}
+
+.desktop .img-2 {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 0;
+    left: 0;
+}
+
+.desktop .skill-select-wrapper {
+    position: absolute;
+    /* Позиционирование */
+    width: 150px;
+    /* Ширина, можно настроить по желанию */
+    height: 35px;
+    /* Высота, чтобы соответствовать остальным элементам */
+    top: 325px;
+    /* Позиция сверху, измените по необходимости, чтобы подвинуть ближе к grommet-icons-drag */
+    left: 128px;
+    /* Позиция слева, соответствует остальным элементам */
+}
+
+.desktop .skill-select-wrapper label {
+    font-family: "SB Sans Display-Semibold", Helvetica;
+    color: #212121;
+    font-size: 16px;
+}
+
+.desktop .skill-select-wrapper select {
+    width: 100%;
+    /* Занимает всю ширину родительского контейнера */
+    height: 100%;
+    /* Занимает всю высоту родительского контейнера */
+    padding: 0;
+    /* Убираем отступы */
+    border-radius: 5px;
+    /* Закругление углов */
+    border: 1px solid #c6cfda;
+    /* Цвет границы */
+}
+
+.desktop .java-script {
+    position: absolute;
+    top: 13px;
+    left: 40px;
+    font-family: "SB Sans Display-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 10px;
+    white-space: nowrap;
+}
+
+.desktop .text-wrapper-16 {
+    position: absolute;
+    top: 20px;
+    /* Расположение сверху */
+    left: 20px;
+    /* Расположение слева */
+    font-family: "SB Sans Display-Semibold", Helvetica;
+    /* Шрифт */
+    font-size: 24px;
+    /* Размер шрифта, можно настроить */
+    color: #212121;
+    /* Цвет текста, можно настроить */
+}
+
+.desktop .overlap-2 {
+    position: absolute;
+    width: 1394px;
+    height: 1220px;
+    top: 139px;
+    left: 47px;
+}
+
+.desktop .overlap-wrapper {
+    position: absolute;
+    width: 1295px;
+    height: 104px;
+    top: 115px;
+    left: 42px;
+}
+
+.desktop .overlap-group-wrapper {
+    position: absolute;
+    width: 193px;
+    height: 48px;
+    top: 26px;
+    left: 1063px;
+}
+
+.desktop .text-wrapper-11 {
+    width: 144px;
+    top: 18px;
+    left: 24px;
+    font-family: "SB Sans Display-Semibold", Helvetica;
+    color: #516077;
+    font-size: 16px;
+    line-height: 10px;
+    position: absolute;
+    font-weight: 400;
+    letter-spacing: 0;
+    white-space: nowrap;
+}
+
+.desktop .text-wrapper-15 {
+    top: 201px;
+    left: 836px;
+    position: absolute;
+    font-family: "SB Sans Display-Regular", Helvetica;
+    font-weight: 400;
+    color: #516077;
+    font-size: 13px;
+    letter-spacing: 0;
+    line-height: 10px;
+    white-space: nowrap;
+}
+
+.desktop .material-symbols {
+    position: absolute;
+    width: 53px;
+    height: 53px;
+    top: 60px;
+    left: 1309px;
+}
+
+.desktop .vector-wrapper {
+    position: absolute;
+    width: 65px;
+    height: 53px;
+    top: 60px;
+    left: 1367px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: #c6cfda;
+}
+
+.desktop .vector-3 {
+    position: absolute;
+    width: 49px;
+    height: 39px;
+    top: 6px;
+    left: 7px;
+}
+
+.desktop .group-6 {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: 58px;
+    left: 50px;
+}
+
+.desktop .group-7 {
+    position: absolute;
+    width: 59px;
+    height: 55px;
+    top: 50px;
+    left: 1726px;
+}
+
+.desktop .text-wrapper-16 {
+    top: 34px;
+    left: 816px;
+    font-family: "SB Sans Display-Semibold", Helvetica;
+    color: #8191a2;
+    font-size: 96px;
+    line-height: 109.0px;
+    position: absolute;
+    font-weight: 400;
+    letter-spacing: 0;
+    white-space: nowrap;
+}
+
+.ct-series-a .ct-line {
+    stroke: rgb(134, 27, 227);
+}
+
+.ct-series-b .ct-line {
+    stroke: rgb(68, 235, 153);
+}
+
+.ct-series-c .ct-line {
+    stroke: rgb(255, 197, 64);
+}
+
+.ct-series-d .ct-line {
+    stroke: rgb(68, 180, 150);
+}
+
+.ct-series-e .ct-line {
+    stroke: rgb(255, 74, 80);
+}
+
+/* Стили для точек на графике */
+.ct-point {
+    stroke-width: 10px;
+}
+
+/* Дополнительные стили для графика */
+.ct-chart {
+    position: relative;
+    height: 400px;
+    /* Высота графика */
+}

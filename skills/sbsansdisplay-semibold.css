@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'SBSansDisplay-Semibold';
+	src: url('../fonts/sbsansdisplay-semibold.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/sbsansdisplay-semibold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/sbsansdisplay-semibold.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/sbsansdisplay-semibold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/sbsansdisplay-semibold.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/sbsansdisplay-semibold.svg#sbsansdisplay-semibold') format('svg'); /* Chrome < 4, Legacy iOS */
+}

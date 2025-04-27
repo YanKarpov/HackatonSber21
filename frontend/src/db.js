@@ -1,12 +1,11 @@
 const mysql = require('mysql2');
 
 const db = mysql.createConnection({
-  host: 'localhost',
+  host: 'mysql', 
   user: 'root',
   password: 'qwerty',
   database: 'sber'
 });
-
 db.connect(err => {
   if (err) {
     console.error('Ошибка подключения к базе данных:', err);

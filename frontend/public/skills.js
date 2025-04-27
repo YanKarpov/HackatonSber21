@@ -19,7 +19,6 @@ window.onload = function() {
             secondStatsDiv.innerHTML = '<p>Ошибка при загрузке данных.</p>';
         });
 
-    // Обработчик нажатия на кнопку "Применить фильтры"
     applyFiltersButton.addEventListener('click', async function () {
         const selectedSkills = [];
 
@@ -28,18 +27,16 @@ window.onload = function() {
             const priorityInput = document.getElementById(`${skill.toLowerCase()}-priority`);
             const priorityValue = parseInt(priorityInput.value);
 
-            // Если приоритет указан и валиден, добавляем в список выбранных навыков
             if (!isNaN(priorityValue) && priorityValue >= 1 && priorityValue <= 3) {
                 selectedSkills.push({
                     skill: skill,
-                    priority: priorityValue  // Считываем приоритет
+                    priority: priorityValue  
                 });
             }
         });
 
         console.log("Selected Skills with order:", selectedSkills);
 
-        // Если фильтры не выбраны, просто выводим всю таблицу
         if (selectedSkills.length === 0) {
             renderTable(allUsers);
             return;
@@ -50,7 +47,7 @@ window.onload = function() {
             const response = await fetch('/calculate', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ filters: selectedSkills }) // Отправляем выбранные навыки с приоритетами
+                body: JSON.stringify({ filters: selectedSkills }) 
             });
 
             if (!response.ok) {
